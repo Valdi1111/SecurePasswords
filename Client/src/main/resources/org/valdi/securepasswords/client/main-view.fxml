@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.valdi.securepasswords.client.controllers.MainController">
+    <right>
+        <VBox alignment="TOP_CENTER" styleClass="toolbar">
+            <children>
+                <Button mnemonicParsing="false" onAction="#onAdd" styleClass="toolbar-button" text="Add">
+                    <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-plus" iconSize="16" styleClass="toolbar-icon"
+                                  wrappingWidth="20.0"/>
+                    </graphic>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#onEdit" styleClass="toolbar-button" text="Edit">
+                    <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-edit" iconSize="16" styleClass="toolbar-icon"
+                                  wrappingWidth="20.0"/>
+                    </graphic>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#onDelete" styleClass="toolbar-button" text="Delete">
+                    <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-trash" iconSize="16" wrappingWidth="20.0"/>
+                    </graphic>
+                </Button>
+                <Pane VBox.vgrow="ALWAYS"/>
+                <Button mnemonicParsing="false" onAction="#onExit" styleClass="toolbar-button" text="Exit">
+                    <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-sign-in-alt" iconSize="16" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" wrappingWidth="20.0"/>
+                    </graphic>
+                </Button>
+            </children>
+        </VBox>
+    </right>
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <ListView fx:id="passwordListView" onMouseClicked="#onClick" styleClass="list-cell"/>
+    </center>
+    <stylesheets>
+        <URL value="@main-view.css"/>
+        <URL value="@toolbar.css"/>
+    </stylesheets>
+</BorderPane>

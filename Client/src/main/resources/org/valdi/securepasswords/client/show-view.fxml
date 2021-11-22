@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="350.0" prefWidth="450.0" stylesheets="@show-view.css" xmlns="http://javafx.com/javafx/11.0.2"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.valdi.securepasswords.client.controllers.ShowController">
+    <center>
+        <VBox BorderPane.alignment="CENTER">
+            <children>
+                <FlowPane alignment="CENTER_LEFT" hgap="10.0" styleClass="name">
+                    <children>
+                        <Label styleClass="name-field" text="Name"/>
+                        <TextField fx:id="nameField" editable="false" styleClass="value-field"/>
+                    </children>
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                </FlowPane>
+                <ListView fx:id="elementsListView" styleClass="list-cell"/>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

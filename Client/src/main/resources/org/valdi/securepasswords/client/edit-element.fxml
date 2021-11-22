@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane fx:id="pane" hgap="10.0" styleClass="element" xmlns="http://javafx.com/javafx/11.0.2"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.valdi.securepasswords.client.controllers.EditElement">
+    <children>
+        <TextField fx:id="nameField" promptText="Name" styleClass="name-field"/>
+        <TextField fx:id="valueField" promptText="Value" styleClass="value-field"/>
+        <CheckBox fx:id="hideCheck" mnemonicParsing="false" styleClass="hide-check" text="Hide"/>
+    </children>
+</FlowPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<VBox alignment="CENTER" prefHeight="320.0" prefWidth="300.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.valdi.securepasswords.client.controllers.LoginController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <ImageView fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@login.png" />
+        </image>
+    </ImageView>
+   <BorderPane layoutX="30.0" layoutY="178.0" prefHeight="200.0" prefWidth="200.0">
+      <left>
+         <FontIcon iconLiteral="fas-server" iconSize="20" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="20.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+               <Insets right="10.0" />
+            </BorderPane.margin>
+         </FontIcon>
+      </left>
+      <center>
+         <AnchorPane maxHeight="25.0" BorderPane.alignment="CENTER_LEFT">
+            <children>
+               <ChoiceBox fx:id="serverChoice" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            </children>
+         </AnchorPane>
+      </center>
+      <right>
+         <Button maxHeight="25.0" mnemonicParsing="false" onAction="#addServer" BorderPane.alignment="CENTER">
+            <graphic>
+               <FontIcon iconLiteral="fas-plus" iconSize="16" strokeType="OUTSIDE" strokeWidth="0.0" />
+            </graphic>
+            <BorderPane.margin>
+               <Insets left="5.0" />
+            </BorderPane.margin>
+         </Button>
+      </right>
+   </BorderPane>
+    <BorderPane prefHeight="200.0" prefWidth="200.0">
+        <left>
+            <FontIcon iconLiteral="fas-user" iconSize="20" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="20.0" BorderPane.alignment="CENTER">
+                <BorderPane.margin>
+                    <Insets right="10.0" />
+                </BorderPane.margin>
+            </FontIcon>
+        </left>
+        <center>
+            <TextField fx:id="usernameField" onKeyPressed="#onEnter" promptText="Username" BorderPane.alignment="CENTER" />
+        </center>
+    </BorderPane>
+    <BorderPane prefHeight="200.0" prefWidth="200.0">
+        <left>
+            <FontIcon iconLiteral="fas-key" iconSize="20" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="20.0" BorderPane.alignment="CENTER">
+                <BorderPane.margin>
+                    <Insets right="10.0" />
+                </BorderPane.margin>
+            </FontIcon>
+        </left>
+        <center>
+            <PasswordField fx:id="passwordField" onKeyPressed="#onEnter" promptText="Password" BorderPane.alignment="CENTER" />
+        </center>
+    </BorderPane>
+    <Button fx:id="loginButton" onAction="#onLogin" text="Login">
+        <graphic>
+            <FontIcon iconLiteral="fas-sign-in-alt" iconSize="16" wrappingWidth="20.0" />
+        </graphic>
+    </Button>
+</VBox>

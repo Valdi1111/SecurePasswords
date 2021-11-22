@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.valdi.securepasswords.client.controllers.EditController">
+    <right>
+        <VBox alignment="TOP_CENTER" styleClass="toolbar">
+            <children>
+                <Button mnemonicParsing="false" onAction="#onAdd" styleClass="toolbar-button" text="Add">
+                    <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-plus" iconSize="16" styleClass="toolbar-icon"
+                                  wrappingWidth="20.0"/>
+                    </graphic>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#onDelete" styleClass="toolbar-button" text="Delete">
+                    <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-trash" iconSize="16" wrappingWidth="20.0"/>
+                    </graphic>
+                </Button>
+                <Pane VBox.vgrow="ALWAYS"/>
+                <Button layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#onSave"
+                        styleClass="toolbar-button" text="Save">
+                    <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-save" iconSize="16" styleClass="toolbar-icon"
+                                  wrappingWidth="20.0"/>
+                    </graphic>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#onBack" styleClass="toolbar-button" text="Back">
+                    <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-undo-alt" iconSize="16" strokeType="OUTSIDE"
+                                  strokeWidth="0.0" wrappingWidth="20.0"/>
+                    </graphic>
+                </Button>
+            </children>
+        </VBox>
+    </right>
+    <stylesheets>
+        <URL value="@show-view.css"/>
+        <URL value="@toolbar.css"/>
+    </stylesheets>
+    <center>
+        <VBox BorderPane.alignment="CENTER">
+            <children>
+                <FlowPane alignment="CENTER_LEFT" hgap="10.0" styleClass="name" vgap="10.0">
+                    <children>
+                        <Label styleClass="name-field" text="Name"/>
+                        <TextField fx:id="nameField" styleClass="value-field"/>
+                        <Label layoutX="25.0" layoutY="29.0" styleClass="name-field" text="Link"/>
+                        <TextField fx:id="linkField" layoutX="185.0" layoutY="25.0" styleClass="value-field"/>
+                    </children>
+                    <VBox.margin>
+                        <Insets/>
+                    </VBox.margin>
+                </FlowPane>
+                <ListView fx:id="elementsListView" styleClass="list-cell"/>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,37 @@
+.name {
+    -fx-padding: 15 0 15 15;
+}
+
+.element {
+    -fx-padding: 10 0 10 15;
+}
+
+.name-field {
+    -fx-pref-width: 150;
+    -fx-text-fill: black;
+}
+
+.value-field {
+    -fx-pref-width: 175;
+}
+
+.hide-check {
+    -fx-text-fill: black;
+}
+
+.list-cell {
+    -fx-padding: 0;
+}
+
+.list-cell:odd {
+    -fx-background-color: lightcyan;
+}
+
+.list-cell:selected {
+    -fx-background-color: #A9DDD6;
+    -fx-text-fill: black;
+}
+
+.list-cell:empty {
+    -fx-background-color: #f4f4f4;
+}

@@ -1,0 +1,14 @@
+.list-cell {
+    -fx-alignment: center;
+    -fx-padding: 0;
+    -fx-pref-height: 40;
+}
+
+.list-cell:odd {
+    -fx-background-color: lightcyan;
+}
+
+.list-cell:selected {
+    -fx-background-color: #A9DDD6;
+    -fx-text-fill: black;
+}

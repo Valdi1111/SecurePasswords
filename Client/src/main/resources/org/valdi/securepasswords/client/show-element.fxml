@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane fx:id="pane" hgap="10.0" styleClass="element" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.valdi.securepasswords.client.controllers.ShowElement">
+    <children>
+        <Label fx:id="nameLabel" styleClass="name-field" text="Label" />
+        <TextField fx:id="valueField" editable="false" styleClass="value-field" />
+        <PasswordField fx:id="hiddenField" editable="false" styleClass="value-field" />
+        <Button fx:id="copyButton" mnemonicParsing="false" onAction="#onCopy" />
+        <Button fx:id="hideButton" mnemonicParsing="false" onAction="#onHide" />
+    </children>
+</FlowPane>
