@@ -1,5 +1,9 @@
 # Project exclude paths
+/Client/src/main/java/META-INF/
+/Core/src/main/java/META-INF/
+/Server/src/main/java/META-INF/
 /Client/target/
 /Core/target/
 /Server/target/
-/.idea
+/.idea/
+/out/

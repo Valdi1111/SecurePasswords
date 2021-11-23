@@ -93,7 +93,7 @@ public class MainController {
             return;
         }
 
-        if (event.getClickCount() == 1) {
+        if (event.getClickCount() == 3) {
             this.onOpenLink();
         }
 
